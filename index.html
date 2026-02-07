@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             font-family: 'Arial', sans-serif;
             background-image: linear-gradient(135deg, #b3e5fc, #e1f5fe);
             display: flex;
@@ -14,38 +14,39 @@
             justify-content: center;
         }
 
-        /* Container without the 'card' class background/shadow */
-        .content-wrapper {
-            padding: 40px;
-            text-align: center;
-            color: #003366;
-            max-width: 420px;
+        /* Centered white block wrapper */
+        .white-block {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 90%;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
+            font-size: 36px;
+            margin: 15px 0;
+            text-align: center;
         }
 
-        .intro {
+        .intro, .question, .conclusion {
             font-size: 18px;
-            margin-bottom: 25px;
+            margin: 15px 0;
+            text-align: center;
+            color: #003366;
         }
 
         .question {
-            font-size: 22px;
-            margin-bottom: 30px;
             font-weight: bold;
-        }
-
-        .conclusion {
-            margin-top: 25px;
-            font-size: 16px;
-            font-style: italic;
+            font-size: 22px;
         }
 
         button {
-            padding: 12px 28px;
+            padding: 14px 30px;
             font-size: 16px;
             border: none;
             border-radius: 30px;
@@ -65,64 +66,56 @@
         }
 
         .giraffes {
-            font-size: 30px;
-            margin-bottom: 10px;
+            font-size: 40px;
+            margin-bottom: 15px;
         }
 
         /* Horizontal Image Blocks */
         .image-row {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 15px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
         }
 
         .image-row img {
-            width: 100px;
-            height: 100px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 15px;
-            background: #fff; /* Placeholder background */
+            background: #fff;
         }
     </style>
 </head>
 <body>
 
-    <div class="content-wrapper">
+    <div class="white-block">
         <div class="giraffes">🦒🦒</div>
-        
+
         <div class="image-row">
             <img src="Denzel1.jpeg" alt="Image 1">
+            <img src="Denzel2.jpeg" alt="Image 2">
+            <img src="Denzel3.jpeg" alt="Image 3">
         </div>
 
         <h1>Marshia 💖</h1>
 
-        <div class="image-row">
-            <img src="Denzel2.jpeg" alt="Image 4">
-        </div>
-
         <p class="intro">
-            If i could give you one thing in my life i would give you the ability to see yourself through my eyes.Only then would you reslise how special you are to me.
+            If I could give you one thing in my life I would give you the ability to see yourself through my eyes. Only then would you realize how special you are to me.
         </p>
-
-        <div class="image-row">
-            <img src="Denzel3.jpeg" alt="Image 1">
-        </div>
 
         <p class="question">
             Will you be my Valentine?
         </p>
 
-        <button class="yes" onclick="alert('You just made my heart the happiest 💕')">
-            Yes
-        </button>
-
-        <button class="no" onmouseover="moveButton(this)">
-            No
-        </button>
+        <div>
+            <button class="yes" onclick="alert('You just made my heart the happiest 💕')">Yes</button>
+            <button class="no" onmouseover="moveButton(this)">No</button>
+        </div>
 
         <p class="conclusion">
-            If only you could see yourself through my eyes perhaps then you would understand why i marvel at your beauty so quitly❤️
+            If only you could see yourself through my eyes, perhaps then you would understand why I marvel at your beauty so quietly ❤️
         </p>
     </div>
 
@@ -136,5 +129,6 @@
 
 </body>
 </html>
+
 
 
