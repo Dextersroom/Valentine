@@ -12,15 +12,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
 
         /* Centered white block wrapper */
         .white-block {
             background-color: #ffffff;
-            padding: 50px;
+            padding: 40px 30px;
             border-radius: 20px;
             max-width: 900px;
-            width: 90%;
+            width: 100%;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
@@ -28,16 +29,20 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             margin: 15px 0;
             text-align: center;
         }
 
-        .intro, .question, .conclusion {
-            font-size: 18px;
-            margin: 15px 0;
+        .text-block {
             text-align: center;
             color: #003366;
+            margin: 15px 0;
+        }
+
+        .intro, .question, .conclusion {
+            font-size: 18px;
+            line-height: 1.5;
         }
 
         .question {
@@ -85,6 +90,50 @@
             object-fit: cover;
             border-radius: 15px;
             background: #fff;
+            transition: transform 0.3s;
+        }
+
+        .image-row img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .white-block {
+                padding: 30px 20px;
+            }
+
+            .image-row img {
+                width: 140px;
+                height: 140px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .intro, .question, .conclusion {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-row img {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .intro, .question, .conclusion {
+                font-size: 15px;
+            }
+
+            .giraffes {
+                font-size: 35px;
+            }
         }
     </style>
 </head>
@@ -101,22 +150,22 @@
 
         <h1>Marshia 💖</h1>
 
-        <p class="intro">
+        <div class="text-block intro">
             If I could give you one thing in my life I would give you the ability to see yourself through my eyes. Only then would you realize how special you are to me.
-        </p>
+        </div>
 
-        <p class="question">
+        <div class="text-block question">
             Will you be my Valentine?
-        </p>
+        </div>
 
         <div>
             <button class="yes" onclick="alert('You just made my heart the happiest 💕')">Yes</button>
             <button class="no" onmouseover="moveButton(this)">No</button>
         </div>
 
-        <p class="conclusion">
+        <div class="text-block conclusion">
             If only you could see yourself through my eyes, perhaps then you would understand why I marvel at your beauty so quietly ❤️
-        </p>
+        </div>
     </div>
 
     <script>
@@ -129,6 +178,8 @@
 
 </body>
 </html>
+
+
 
 
 
