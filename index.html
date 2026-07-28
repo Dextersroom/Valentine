@@ -1,197 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine?</title>
-    <style>
-        :root {
-            --primary-pink: #ff6f91;
-            --text-dark: #003366;
-            --bg-gradient: linear-gradient(135deg, #fce4ec, #e1f5fe);
-        }
-
-        body {
-            margin: 0;
-            padding: 20px 10px;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg-gradient);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Allows scrolling on small screens */
-            overflow-y: auto; 
-        }
-
-        .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px 20px;
-            border-radius: 24px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        h1 {
-            color: var(--text-dark);
-            font-size: 2rem;
-            margin: 10px 0;
-        }
-
-        .text-block {
-            color: var(--text-dark);
-            margin: 15px 0;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-
-        .question {
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: #d81b60;
-        }
-
-        /* Responsive Image Styling */
-        .img-wrapper {
-            width: 100%;
-            margin: 15px 0;
-        }
-
-        .img-wrapper img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .img-wrapper img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Buttons */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            margin: 25px 0;
-            position: relative;
-            min-height: 60px;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-
-        button {
-            padding: 15px 35px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            touch-action: manipulation;
-        }
-
-        .yes {
-            background-color: var(--primary-pink);
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 111, 145, 0.4);
-        }
-
-        .yes:active {
-            transform: scale(0.95);
-        }
-
-        .no {
-            background-color: #eee;
-            color: #666;
-            position: relative;
-            z-index: 10;
-        }
-
-        .giraffes {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        /* Small Screen Adjustments */
-        @media (max-width: 480px) {
-            h1 { font-size: 1.6rem; }
-            .text-block { font-size: 1rem; }
-            .question { font-size: 1.2rem; }
-            .container { padding: 20px 15px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive creative portfolio for Alex Nova, a multidisciplinary UI/UX engineer." />
+  <title>Alex Nova | Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="mesh-bg" aria-hidden="true">
+    <span class="blob blob-one"></span>
+    <span class="blob blob-two"></span>
+    <span class="blob blob-three"></span>
+  </div>
 
-    <div class="container">
-        <div class="giraffes">🦒🦒</div>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Alex Nova home"><span>AN</span>Studio</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta magnetic" href="mailto:hello@alexnova.dev">Let's talk</a>
+      </div>
+    </nav>
+  </header>
 
-        <div class="img-wrapper">
-            <img src="Denzel1.jpeg" alt="Us">
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Creative Web Developer · UI/UX Engineer</p>
+        <h1>Designing electric digital experiences that feel alive.</h1>
+        <p class="subtitle">I turn ambitious ideas into expressive, accessible interfaces with bold visual systems, fluid motion, and production-ready frontend craft.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary magnetic" href="#projects">View My Work</a>
+          <a class="btn btn-secondary magnetic" href="#contact">Get in Touch</a>
         </div>
-
-        <h1>Marshia 💖</h1>
-            
-        <div class="text-block">
-            "If I could give you one thing in my life, I would give you the ability to see yourself through my eyes. Only then would you realize how special you are to me."
+      </div>
+      <aside class="hero-card reveal" aria-label="Portfolio highlights">
+        <div class="orbit"></div>
+        <p class="card-kicker">Selected impact</p>
+        <strong>42%</strong>
+        <span>average lift in product engagement after design-system refreshes.</span>
+        <div class="mini-stats">
+          <span>UX</span><span>React</span><span>Brand</span>
         </div>
+      </aside>
+    </section>
 
-        <div class="img-wrapper">
-            <img src="Denzel2.jpeg" alt="Memories">
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Featured projects</p>
+        <h2>Interactive work with personality and purpose.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="preview preview-one"></div>
+          <div class="project-content">
+            <div class="tags"><span>UX Design</span><span>React</span></div>
+            <h3>PulseFlow Analytics</h3>
+            <p>A high-density dashboard redesigned around faster insight discovery and crisp data storytelling.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="preview preview-two"></div>
+          <div class="project-content">
+            <div class="tags"><span>Branding</span><span>WebGL</span></div>
+            <h3>Chromatic Launch</h3>
+            <p>An immersive campaign page with kinetic gradients, scroll choreography, and punchy conversion paths.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="preview preview-three"></div>
+          <div class="project-content">
+            <div class="tags"><span>Design System</span><span>Motion</span></div>
+            <h3>NovaKit Components</h3>
+            <p>A token-driven UI system with accessible components, polished states, and delight baked in.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="preview preview-four"></div>
+          <div class="project-content">
+            <div class="tags"><span>Product</span><span>Strategy</span></div>
+            <h3>Signal Studio</h3>
+            <p>A creator platform prototype balancing playful onboarding with clear workflows for power users.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills & expertise</p>
+        <h2>Where strategic thinking meets expressive execution.</h2>
+      </div>
+      <div class="skill-cloud reveal" aria-label="Skill list">
+        <span>UI Architecture</span><span>Design Systems</span><span>JavaScript</span><span>Accessibility</span><span>Interaction Design</span><span>Prototyping</span><span>CSS Art</span><span>Brand Direction</span><span>Performance</span><span>Storytelling</span>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-panel reveal">
+        <p class="eyebrow">Available for select projects</p>
+        <h2>Have a bold idea? Let's make it unforgettable.</h2>
+        <p>Send a note and I’ll reply with ideas, timelines, and the next best step.</p>
+        <a class="btn btn-primary magnetic" href="mailto:hello@alexnova.dev">hello@alexnova.dev</a>
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="text-block question">
-            Will you be my Valentine?
-        </div>
+  <footer class="footer">
+    <p>© 2026 Alex Nova. Crafted with color, code, and curiosity.</p>
+  </footer>
 
-        <div class="btn-group">
-            <button class="yes" onclick="celebrate()">Yes</button>
-            <button class="no" id="noBtn" onmouseover="moveButton()" ontouchstart="moveButton()">No</button>
-        </div>
-
-        <div class="img-wrapper">
-            <img src="Denzel3.jpeg" alt="Together">
-        </div>
-
-        <div class="text-block" style="font-style: italic; font-size: 0.9rem; opacity: 0.8;">
-            If only you could see yourself through my eyes, perhaps then you would understand why I marvel at your beauty so quietly ❤️
-        </div>
-    </div>
-
-    <script>
-        function moveButton() {
-            const btn = document.getElementById('noBtn');
-            // Restrict movement within a reasonable range so it doesn't leave the screen
-            const x = Math.random() * (window.innerWidth - btn.offsetWidth - 20);
-            const y = Math.random() * (window.innerHeight - btn.offsetHeight - 20);
-            
-            // For a more professional "escape", we use fixed positioning once triggered
-            btn.style.position = 'fixed';
-            btn.style.left = Math.max(10, Math.min(x, window.innerWidth - 100)) + 'px';
-            btn.style.top = Math.max(10, Math.min(y, window.innerHeight - 50)) + 'px';
-        }
-
-        function celebrate() {
-            alert('You just made my heart the happiest 💕');
-            // Optional: Redirect to a celebration page or show confetti
-        }
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
